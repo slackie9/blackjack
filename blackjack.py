@@ -14,7 +14,7 @@ class Blackjack:
         d_status = self.dealer.deal()
         
 
-        self.player.show
+        self.player.show()
         
 
         if p_status == 1:

@@ -24,7 +24,7 @@ class Player:
 
     def check_score(self):
         a_counter = 0
-        self.counter =0
+        self.score =0
         for card in self.cards:
             if card.price() == 11:
                 a_counter +=1
@@ -32,7 +32,7 @@ class Player:
 
         while a_counter !=0 and self.score >21:
             a_counter -=1
-            self.counter -= 10
+            self.score -= 10
         return self.score
 
     def show(self):

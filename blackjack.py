@@ -12,6 +12,7 @@ class Blackjack:
     def play(self):
         p_status = self.player.deal()
         d_status = self.dealer.deal()
+        
 
         self.player.show
         
@@ -26,7 +27,7 @@ class Blackjack:
         cmd =""
         while cmd != "Stand":
             bust = 0
-            cmd = input ("Hit or Stand Hit \n")
+            cmd = input ("Hit or Stand \n")
 
             if cmd == "Hit":
                 bust = self.player.hit()
@@ -38,7 +39,7 @@ class Blackjack:
 
         self.dealer.show()
         if d_status ==1 :
-            print("Dealse got Blackjack! Better luck next time!")
+            print("Dealer got Blackjack! Better luck next time!")
             return 1
         
         while self.dealer.check_score() <17:
